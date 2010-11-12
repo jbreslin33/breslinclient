@@ -16,7 +16,7 @@
 #*/
 cmake_minimum_required(VERSION 2.6)
 
-project(GameServer)
+project(GameClient)
 
 
 if (CMAKE_BUILD_TYPE STREQUAL "")
@@ -30,25 +30,21 @@ set(CMAKE_DEBUG_POSTFIX "_d")
 set(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_BINARY_DIR}/dist")
 
 set(HDRS
-	GameServer.h
-	ListenServer.h
-	Client.h
+
 
 )
 
 set(SRCS
-	GameServer.cpp
-	ListenServer.cpp
-	Client.cpp
+    talker.c
 	Main.cpp
 
 )
 
 
 
-add_executable(GameServer WIN32 ${HDRS} ${SRCS})
+add_executable(GameClient WIN32 ${HDRS} ${SRCS})
 
-#set_target_properties(GameServer PROPERTIES DEBUG_POSTFIX _d)
+#set_target_properties(GameClient PROPERTIES DEBUG_POSTFIX _d)
 
 
 #file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/dist/bin)
