@@ -16,7 +16,7 @@
 #*/
 cmake_minimum_required(VERSION 2.6)
 
-project(GameClient)
+project(Client)
 
 
 if (CMAKE_BUILD_TYPE STREQUAL "")
@@ -30,25 +30,16 @@ set(CMAKE_DEBUG_POSTFIX "_d")
 set(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_BINARY_DIR}/dist")
 
 set(HDRS
-
-
+	Client.h
 )
 
 set(SRCS
-    talker.c
+	Client.cpp
 	Main.cpp
-
 )
 
 
 
-add_executable(GameClient WIN32 ${HDRS} ${SRCS})
-
-#set_target_properties(GameClient PROPERTIES DEBUG_POSTFIX _d)
-
-
-#file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/dist/bin)
-
-
+add_executable(Client WIN32 ${HDRS} ${SRCS})
 
 
