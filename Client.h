@@ -16,12 +16,17 @@ class Client
 {
 
 public:
-    Client();
+    Client(std::string userName);
     virtual ~Client(void);
-    void setUsername(std::string username) { mUsername = username; }
+
+	//username
+	void        setUserName(std::string userName) { mUserName = userName; }
+    	std::string getUserName(                    ) { return mUserName;     }
 
 protected:
-std::string mUsername;
+
+std::string mUserName;
+
 };
 
 #endif

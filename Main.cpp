@@ -2,6 +2,6 @@
 
 int main()
 {
-	Client* client =  new Client();
+	Client* client =  new Client("gamer");
 }
 

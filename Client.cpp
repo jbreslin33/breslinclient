@@ -7,8 +7,9 @@ Filename:    Client.cpp
 
 
 //-------------------------------------------------------------------------------------
-Client::Client()
+Client::Client(std::string userName)
 {
+	mUserName = userName;
 }
 //-------------------------------------------------------------------------------------
 Client::~Client(void)
