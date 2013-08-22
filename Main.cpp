@@ -1,7 +1,0 @@
-#include "Client.h"
-
-int main()
-{
-	Client* client =  new Client("gamer");
-}
-
